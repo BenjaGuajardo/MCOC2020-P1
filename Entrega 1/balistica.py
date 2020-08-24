@@ -8,7 +8,7 @@ cm = 0.01           #m
 inch = 2.54*cm
 g = 9.81            #m/s/s
 
-#Masa y viento
+#Masa
 
 m = 15 #kg
 
@@ -51,7 +51,7 @@ def bala(z,t):
     
     return zp
 
-V = [0, 10, 20] #m/s
+V = [0, 10, 20] # viento en m/s
 
 for i in V:
     
@@ -71,7 +71,6 @@ for i in V:
     plt.plot(x, y, label = f'$V$ = {i} m/s')
 
 plt.figure(1)
-#plt.axis([0,160,0,50])
 plt.ylim(0,50)
 plt.xlim(0)
 plt.grid()
