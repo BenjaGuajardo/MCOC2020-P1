@@ -56,7 +56,7 @@ z0 = sp.array([x_i,y_i,z_i,vx_i,vy_i,vz_i])
 sol = odeint(satelite, z0, t)
 
 final_estimado = sol[-1,:3] #m
-final_real = [1822794.314710,6837567.652326,103204.079648] #m
+final_real = [1822794.314710,6837567.652326,-103204.079648] #m
 
 diferencia = sp.sqrt(sp.dot((final_real-final_estimado),(final_real-final_estimado))) #m
 
