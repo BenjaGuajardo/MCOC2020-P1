@@ -18,7 +18,7 @@
 
 ## Estudio de convergencia Método de Euler
 
-+ Para el estudio de convergencia del método de Euler, se comparó la solución real de la ecuacion diferencial de oscilamiento armónico con las soluciones que se obtuvieron al utilizar la función odeint de scipy y el método de Euler con distintas subdivisiones. El resultado se puede observar en la siguiente figura:
++ Para el estudio de convergencia del método de Euler, se comparó la solución real de la ecuacion diferencial del oscilador armónico con las soluciones que se obtuvieron al utilizar la función odeint de scipy y el método de Euler con distintas subdivisiones. El resultado se puede observar en la siguiente figura:
 
 ![Entrega4](https://user-images.githubusercontent.com/69161061/91782656-b5d8e380-ebcb-11ea-9079-3304d300d470.png)
 
