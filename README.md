@@ -15,3 +15,11 @@
 + Finalmente, en la figura 3 se puede observar las órbitas del satélite en el plano xy, donde se pueden notar dos órbitas completas, que fueron realizadas en 3.31 horas (también calculado mediante tanteo).
 
 ![figura 3](https://user-images.githubusercontent.com/69161061/91486880-e0990400-e87a-11ea-87d2-3e0f904867b1.png)![Figure_3_zoom](https://user-images.githubusercontent.com/69161061/91487996-a6c8fd00-e87c-11ea-99f8-b24595ab2782.png)
+
+## Estudio de convergencia Método de Euler
+
++ Para el estudio de convergencia del método de Euler, se comparó la solución real de la ecuacion diferencial de oscilamiento armónico con las soluciones que se obtuvieron al utilizar la función odeint de scipy y el método de Euler con distintas subdivisiones. El resultado se puede observar en la siguiente figura:
+
+![Entrega4](https://user-images.githubusercontent.com/69161061/91782656-b5d8e380-ebcb-11ea-9079-3304d300d470.png)
+
++ A simple vista se puede notar que mientras mayor sea el Nsubdivisiones, el resultado converge primero a la solución real. Y en el caso contrario, como lo es el caso de "eulerint 1", si es menor el paso entonces menor es la precisión del método. Como era de esperar, "odeint" y "eulerint 100" se asemejan bastante a la solución real, pero no resulta completamente igual.
