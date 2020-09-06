@@ -72,3 +72,7 @@
     ![deriva_odeint](https://user-images.githubusercontent.com/69161061/92331234-a20a0300-f04b-11ea-82f3-5d3bb7d07470.png)
   
     + El código demora 2.26 s (considera cálculo de odeint, deriva y gráficos).
+
++ La orbita final predicha en 3 dimensiones es la siguiente
+
+![3d](https://user-images.githubusercontent.com/69161061/92331497-5eb09400-f04d-11ea-9a83-5634ac6e0f56.png)
