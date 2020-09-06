@@ -23,3 +23,52 @@
 ![Entrega4](https://user-images.githubusercontent.com/69161061/91782656-b5d8e380-ebcb-11ea-9079-3304d300d470.png)
 
 + A simple vista se puede notar que mientras mayor sea el Nsubdivisiones, el resultado converge primero a la solución real. Y en el caso contrario, como lo es el caso de "eulerint 1", si es menor el paso entonces menor es la precisión del método. Como era de esperar, "odeint" y "eulerint 100" se asemejan bastante a la solución real, pero no resulta completamente igual.
+
+## Mejoras al modelo y estudio de convergencia
+
++ A continuación se encuentra la posición (x,y,z) en el tiempo del vector de estado de Sentinel 1A/B que me fue asignado.
+
+![pregunta1](https://user-images.githubusercontent.com/69161061/92330787-1cd11f00-f048-11ea-8f4e-1978c554a1bb.png)
+
++  Usando la condición inicial del archivo OSV, se cmoparó la solución entre odeint y eulerint (Nsubdiviciones=1).
+
+![pregunta2](https://user-images.githubusercontent.com/69161061/92330833-70dc0380-f048-11ea-8f6e-59265cf2b61d.png)
+
+  + Como se puede apreciar en el gráfico, la deriva máxima alcanzada al final de las 24 horas es de 20.879,4 km.
+
+    + Odeint demoró 0,2855 s
+    + Eulerint demoró 0.6838 s
+
++ ¿Cuantas subdivisiones hay que usar para que la predicción con eulerint al final del tiempo esté en menos de un 1% de error? Grafique la deriva en el tiempo. Comente con respecto del tiempo de ejecución de eulerint ahora. 
+
+  + Error según Nsubdivisiones.
+  
+    + N = 1 : 280% ; Tiempo de ejecución eulerint = 0.6838 s
+    + N = 100 : 140% ; Tiempo de ejecución eulerint = 63.3434 s
+    + N = 200 : 80% ; Tiempo de ejecución eulerint = 127.8157 s
+    + N = 500 : 30% ; Tiempo de ejecución eulerint = 324.3962 s
+    + N = 1000 : 20% ; Tiempo de ejecución eulerint = 625.7143 s
+    
+  + Deriva Nsubdivisiones = 1000
+  
+  ![pregunta3_N1000](https://user-images.githubusercontent.com/69161061/92331062-1e034b80-f04a-11ea-89dd-747fe0ee4e9f.png)
+  
+    + No fue posible llegar al 1% de error debido al excesivo tiempo de ejecución que demoraba eulerint con Ns mayores, por esto es que solamente llegué a N = 1000, donde la deriva máxima disminuyó a 1135,7 km (20% de error).
+
++ Se implementaron las correcciones J2 y J3, para obtener una mayor presición en la predicción.
+  
+  + En cuanto a la deriva entre euler y odeint, la situación no cambia mucho debido a que ambos se vuelven más precisos pero la diferencia entre estos sigue siendo similiar al caso anterior, llegando a una deriva máxima de 20.857,6 km.
+  
+![pregunta4_deriva](https://user-images.githubusercontent.com/69161061/92331200-548d9600-f04b-11ea-8e85-d5a42792854c.png)
+
+  + Donde se nota la mejora es en la comparación entre la posición predicha y la real.
+    
+    + Grafico de posiciones. Se puede observar que la posición predicha (naranja) se acerca bastante a la real (azul), notándose una leve diferencia al final de las 24 horas.
+    
+    ![comparacionP4](https://user-images.githubusercontent.com/69161061/92331360-69b6f480-f04c-11ea-9fae-a756501a94d8.png)
+    
+    + En el siguiente gráfico se puede ver que la deriva máxima disminuye considerablemente de los 1841.8, calculados en la entrega3, a 226,6 km por el hecho de haber implementado J2 y J3.
+    
+    ![deriva_odeint](https://user-images.githubusercontent.com/69161061/92331234-a20a0300-f04b-11ea-82f3-5d3bb7d07470.png)
+  
+    + El código demora 2.26 s (considera cálculo de odeint, deriva y gráficos).
