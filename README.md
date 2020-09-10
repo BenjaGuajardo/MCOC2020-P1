@@ -76,3 +76,11 @@
 + La orbita final predicha en 3 dimensiones es la siguiente
 
 ![3d](https://user-images.githubusercontent.com/69161061/92331497-5eb09400-f04d-11ea-9a83-5634ac6e0f56.png)
+
+
+## Entrega Final
++ Mejoras implementadas:
+  + Corregí errores en las correcciones J3 y J4, ya que había evaluado en las coordenadas iniciales y no transformadas mediante la matriz R.
+  + Agregué más decimales a los valores de J3 y J4.
+  + Cambié G * M = μ
+  + Agregué las correcciones J4 y J5, utilizando algebra simbólica, mediante simpy.
