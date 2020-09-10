@@ -81,6 +81,7 @@
 ## Entrega Final
 + Mejoras implementadas:
   + Corregí errores en las correcciones J3 y J4, ya que había evaluado en las coordenadas iniciales y no transformadas mediante la matriz R.
-  + Agregué más decimales a los valores de J3 y J4.
+  + Agregué más decimales a los valores de Ω, J3 y J4.
   + Cambié G * M = μ
   + Agregué las correcciones J4 y J5, utilizando algebra simbólica, mediante simpy.
++ Gracias a estas mejoras, principalmente a la adición de decimales las constantes mencionadas, logré una mejora significativa en la corrección, pasando de los cientos de kilómetros a sólo decenas e incluso menos.
