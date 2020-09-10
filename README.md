@@ -84,4 +84,7 @@
   + Agregué más decimales a los valores de Ω, J3 y J4.
   + Cambié G * M = μ
   + Agregué las correcciones J4 y J5, utilizando algebra simbólica, mediante simpy.
+  + Para finalizar, por algún motivo, en ciertos casos la corrección J3 implicaba un mayor error final en la mayoría de los casos, por lo que me quedé solo con J2. Como se puede ver en el código, las correcciones J3, J4 y J5 se encuentran comentadas debido a lo señalado.
+  + Agregué las correcciones J4 y J5, utilizando algebra simbólica, mediante simpy.
+  + Agregué las correcciones J4 y J5, utilizando algebra simbólica, mediante simpy.
 + Gracias a estas mejoras, principalmente a la adición de decimales las constantes mencionadas, logré una mejora significativa en la corrección, pasando de los cientos de kilómetros a sólo decenas e incluso menos.
