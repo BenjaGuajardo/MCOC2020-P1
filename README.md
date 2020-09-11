@@ -84,4 +84,4 @@
   + Agregué más decimales a Ω lo cual siginificó pasar de una deriva de aproximadamente 200 km, a una deriva de 7 km.
   + Cambié G * M = μ
   + Agregué las correcciones J4, J5, J6 y J7, utilizando algebra simbólica, mediante simpy.
-+ Gracias a estas mejoras, principalmente a la adición de decimales las constantes mencionadas, logré una mejora significativa en la corrección, pasando de los cientos de kilómetros a sólo decenas e incluso menos. Las correcciones adicionales bajaron el error pero no de gran forma.
++ Gracias a estas mejoras, principalmente a la adición de decimales en las constantes mencionadas (Ω y Js), logré una mejora significativa en la deriva máxima, pasando de los cientos de kilómetros a sólo decenas e incluso menos. Las correcciones adicionales bajaron el error pero no de gran forma.
