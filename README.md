@@ -81,8 +81,7 @@
 ## Entrega Final
 + Mejoras implementadas:
   + Corregí errores en las correcciones J2 y J3, ya que había evaluado en las coordenadas iniciales y no transformadas mediante la matriz R.
-  + Agregué más decimales a los valores de Ω, J3 y J4.
+  + Agregué más decimales a Ω lo cual siginificó pasar de una deriva de aproximadamente 200 km, a una deriva de 7 km.
   + Cambié G * M = μ
-  + Agregué las correcciones J4 y J5, utilizando algebra simbólica, mediante simpy.
-  + Para finalizar, por algún motivo, en ciertos casos la corrección J3 implicaba un mayor error final en la mayoría de los casos, por lo que me quedé solo con J2. Como se puede ver en el código, las correcciones J3, J4 y J5 se encuentran comentadas debido a lo señalado.
-+ Gracias a estas mejoras, principalmente a la adición de decimales las constantes mencionadas, logré una mejora significativa en la corrección, pasando de los cientos de kilómetros a sólo decenas e incluso menos.
+  + Agregué las correcciones J4, J5, J6 y J7, utilizando algebra simbólica, mediante simpy.
++ Gracias a estas mejoras, principalmente a la adición de decimales las constantes mencionadas, logré una mejora significativa en la corrección, pasando de los cientos de kilómetros a sólo decenas e incluso menos. Las correcciones adicionales bajaron el error pero no de gran forma.
